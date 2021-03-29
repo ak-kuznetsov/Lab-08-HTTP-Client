@@ -6,4 +6,5 @@ int main(int argc, char* argv[]) {
   return client.Run();
 }
 
-//./cmake-build-debug/demo  http://localhost:8080/v1/api/suggest {\"input\":\"hel\"}
+//./cmake-build-debug/demo  http://localhost:8080/v1/api/suggest
+//{\"input\":\"hel\"}
