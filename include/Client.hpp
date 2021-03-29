@@ -22,7 +22,7 @@ using tcp = net::ip::tcp;        // from <boost/asio/ip/tcp.hpp>
 class Client {
  public:
   Client(int argc, char* argv[]);
-  int Run();
+  void Run();
 
  private:
   void prepareCommandLine();

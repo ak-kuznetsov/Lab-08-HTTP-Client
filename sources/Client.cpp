@@ -4,7 +4,7 @@
 
 Client::Client(int argc, char* argv[]) : argc_(argc), argv_(argv) {}
 
-int Client::Run() {
+void Client::Run() {
   if (argc_ != 3) {
     std::cerr << "Usage: http-client-sync <url> "
                  "<request>\n"
