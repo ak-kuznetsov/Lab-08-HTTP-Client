@@ -22,7 +22,7 @@ HunterGate(
 )
 
 # TODO: rename project and delete this comment
-project(lab-07-http-server VERSION 0.1.0)
+project(lab-08-http-client VERSION 0.1.0)
 string(APPEND CMAKE_CXX_FLAGS " -pedantic -Werror -Wall -Wextra")
 string(APPEND CMAKE_CXX_FLAGS " -Wno-unused-command-line-argument")
 string(APPEND CMAKE_CXX_FLAGS " -Wshadow -Wnon-virtual-dtor")
@@ -70,16 +70,6 @@ target_link_libraries(${PROJECT_NAME}
         nlohmann_json::nlohmann_json)
 
 target_link_libraries(demo ${PROJECT_NAME})
-
-if(BUILD_TESTS)
-    add_executable(tests
-            # TODO: enum your files and delete this comment
-            ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp
-            )
-    target_link_libraries(tests ${PROJECT_NAME} GTest::gtest_main)
-    enable_testing()
-    add_test(NAME unit_tests COMMAND tests)
-endif()
 
 if(BUILD_COVERAGE)
     set(ENABLE_COVERAGE ON CACHE BOOL "Enable coverage build." FORCE)
