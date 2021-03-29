@@ -9,7 +9,7 @@ int Client::Run() {
     std::cerr << "Usage: http-client-sync <url> "
                  "<request>\n"
               << "Example:\n"
-              << "    ./cmake-build-debug/tests  "
+              << "    ./cmake-build-debug/demo  "
                  "http://localhost:8080/v1/api/suggest "
               << R"({\"input\":\"<user_input>\"})"
                  "\n";
@@ -51,9 +51,7 @@ int Client::Run() {
     }
   } catch (std::exception const& e) {
     std::cerr << "Error: " << e.what() << std::endl;
-    return EXIT_FAILURE;
   }
-  return EXIT_SUCCESS;
 }
 
 void Client::prepareCommandLine() {
