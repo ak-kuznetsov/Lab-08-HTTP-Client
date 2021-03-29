@@ -5,6 +5,16 @@
 Client::Client(int argc, char* argv[]) : argc_(argc), argv_(argv) {}
 
 int Client::Run() {
+  if (argc_ != 3) {
+    std::cerr << "Usage: http-client-sync <url> "
+                 "<request>\n"
+              << "Example:\n"
+              << "    ./cmake-build-debug/tests  "
+                 "http://localhost:8080/v1/api/suggest "
+              << R"({\"input\":\"<user_input>\"})"
+                 "\n";
+  }
+
   try {
     prepareCommandLine();
 
